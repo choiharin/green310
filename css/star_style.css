@@ -18,7 +18,9 @@ a {text-decoration: none;
 align-items: center;
 position: fixed;
 top: 0;
-left: 0;}
+left: 0;
+position: fixed;
+z-index: 9999;}
 
 .logo {width: 75px;
         height: 75px;
@@ -38,6 +40,12 @@ justify-content: space-between;}
         background-size: cover;
         background-repeat: no-repeat;
     margin-top: 120px;}
+
+/* 비주얼내부의 이미지 이동 */
+.visual {position: relative;}
+.love {position: absolute;
+top: 40%;
+left: 320px;}
 
 /* 텍스트박스설정 */
 .txtBox {width: 100%;
