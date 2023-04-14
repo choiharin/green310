@@ -4,17 +4,17 @@
 
 /* 전체설정 */
 * {margin: 0;
-    padding: 0;}
+padding: 0;}
 ul, ol {list-style: none;}
 a {text-decoration: none;
-    color: #000;}
+color: #000;}
 
 /* 헤더설정 */
 .header {width: 100%;
         height: 120px;
         background-color: #f6f5ef;
-    display: flex;
-    justify-content: space-around;
+display: flex;
+justify-content: space-around;
 align-items: center;
 position: fixed;
 top: 0;
@@ -24,8 +24,8 @@ z-index: 9999;}
 
 .logo {width: 75px;
         height: 75px;
-    background-image: url(https://www.starbucks.co.kr/common/img/common/logo.png);
-    text-indent: -9999px;}
+background-image: url(https://www.starbucks.co.kr/common/img/common/logo.png);
+text-indent: -9999px;}
 
 .gnb {width: 70%;}
 .gnb ul {display: flex;
@@ -39,13 +39,46 @@ justify-content: space-between;}
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
-    margin-top: 120px;}
+margin-top: 120px;}
 
 /* 비주얼내부의 이미지 이동 */
 .visual {position: relative;}
 .love {position: absolute;
 top: 40%;
 left: 320px;}
+
+.drink1 {position: absolute;
+        left: 50%;
+margin-left: -120px;
+bottom: 10%;}
+.drink2 {position: absolute;
+left: 50%;
+margin-left: -420px;
+top: 15%;}
+.drink3 {position: absolute;
+left: 50%;
+margin-left: 100px;
+top: 15%;}
+
+.rewards {position: relative;}
+.starRewards {position: absolute;
+left: 25%;
+bottom: 19%;}
+
+.season {position: relative;}
+.spring1 {position: absolute;
+left: 50%;
+margin-left: -450px;}
+.spring2 {position: absolute;
+left: 60%;
+bottom: 45%;}
+
+.costa {position: relative;}
+.coffee1 {position: absolute;
+top: -10%;}
+.coffee2 {position: absolute;
+left: 30%;
+top: 20%;}
 
 /* 텍스트박스설정 */
 .txtBox {width: 100%;
