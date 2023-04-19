@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃004</title>
+    <link rel="stylesheet" href="css/grid-guide.css">
+</head>
+
+<h2>flex 정렬</h2>
+<body>
+    <div class="box001">
+        <div class="box1">로고</div>
+        <div class="box2">메뉴</div>
+    </div>
+    <div class="box002">이미지슬라이드</div>
+    <div class="box003">
+        <div class="box3">공지사항</div>
+        <div class="box4">배너</div>
+        <div class="box5">바로가기</div>
+    </div>
+    <div class="box004">
+        <div class="box6">하단로고</div>
+        <div class="box7">
+            <div class="box7-6">하단메뉴</div>
+            <div class="box7-7">copyright</div>
+        </div>
+    </div>
+
+    <style>
+        /* flex설정 */
+
+        /* box001 설정 */
+        .box001 {display: flex;}
+        .box1 {width: 20%;}
+        .box2 {width: 80%;}
+
+        /* box003 설정 */
+        .box003 {display: flex;}
+        .box003 div {flex-grow: 1;}
+        /* 같은비율로 배열 flex-grow */
+
+        /* box004 설정 */
+        .box004 {display: flex;}
+        .box6 {width: 20%;}
+        .box7 {width: 80%;}
+    </style>
+
+
+<h2>float 정렬</h2>
+<div class="box001">
+    <div class="box1">로고</div>
+    <div class="box2">메뉴</div>
+</div>
+<div class="box002">이미지슬라이드</div>
+<div class="box003">
+    <div class="box3">공지사항</div>
+    <div class="box4">배너</div>
+    <div class="box5">바로가기</div>
+</div>
+<div class="box004">
+    <div class="box6">하단로고</div>
+    <div class="box7">
+        <div class="box7-6">하단메뉴</div>
+        <div class="box7-7">copyright</div>
+    </div>
+</div>
+
+<style>
+    .box001:after {content: "";
+    display: block;
+    clear: both;}
+    .box1 {float: left;
+    width: 20%;}
+    .box2 {float: left;
+    width: 80%;}
+    
+    .box003:after {content: "";
+    display: block;
+    clear: both;}
+    .box003 div {float: left;
+    width: 33.3333%;}
+
+    .box004 {height: 450px;}
+    .box004:after {content: "";
+    display: block;
+    clear: both;}
+    .box6 {float: left;
+    width: 20%;
+    height: 100%;}
+    .box7 {float: left;
+    width: 80%;
+    height: 100%;}
+</style>
+    
+</body>
+</html>

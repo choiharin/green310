@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃연습2</title>
+    <link rel="stylesheet" href="css/grid-guide.css">
+</head>
+
+<h2>float:left활용</h2>
+<body>
+    
+    <div class="box001">header</div>
+
+    <div class="box002">nav</div>
+
+    <div class="box003">
+        <div class="box12">
+            <div class="box1">section</div>
+            <div class="box2">article</div>
+        </div>
+        <div class="box3">aside</div>
+    </div>
+
+    <div class="box004">footer</div>
+</body>
+
+<style>
+    .box12 {width: 60%;
+    float: left;}
+    .box3 {width: 40%;
+    float: left;}
+    .box003::after {content: "";
+                    display: block;
+                    clear: both;}
+        /* float:left 사용 시 부모자에 꼭 after방식 */
+</style>
+
+<br>
+
+<body>
+    <div class="box001">header</div>
+    <div class="box002">nav</div>
+    <div class="box003">
+        <div class="box12">
+            <div class="box1">section</div>
+            <div class="box2">article</div>
+        </div>
+        <div class="box3">aside</div>
+    </div>
+    <div class="box004">footer</div>
+</body>
+
+<style>
+    /* 박스003설정 */
+    /* 부모에 after정렬 float:left를 사용 */
+    .box003 {content:"";
+    display: block;
+    clear: both;}
+    .box12 {width: 60%;
+    float: left;}
+    .box3 {width: 40%;
+    float: left;}
+</style>
+
+
+
+
+</html>
