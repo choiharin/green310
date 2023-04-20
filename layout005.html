@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <link rel="stylesheet" href="css/grid-guide.css">
+</head>
+<body>
+    <div class="boxA">
+        <div class="boxA-1">
+            <div class="box1-1">box1</div>
+            <div class="box1-2">box2</div>
+            <div class="box1-3">box3</div>
+            <div class="box1-4">box4</div>
+        </div>
+        <div class="boxA-2">box5</div>
+    </div>
+    
+    <div class="boxB">box6</div>
+    <div class="boxC">
+        <div class="boxC-1">box7</div>
+        <div class="boxC-2">box8</div>
+        <div class="boxC-3">box9</div>
+        <div class="boxC-4">box10</div>
+    </div>
+    <div class="boxD">
+        <div class="boxD-1">box11</div>
+        <div class="boxD-2">box12</div>
+        <div class="boxD-3">box13</div>
+    </div>
+
+    <style>
+        /* BoxA 설정 */
+        .boxA:after {content: "";
+                    display: block;
+                    clear: both;}
+        .boxA-1 {float: left;
+        width: 70%;}
+        .boxA-1 {float: left;
+        width: 30%;}
+
+        /* BoxC 설정 */
+        .boxC {display: flex;}
+        .boxC div {flex-grow: 1;}
+
+        /* BoxD 설정 */
+        .boxD {display: flex;}
+        .boxD div {flex-grow: 1;}
+    </style>
+
+
+<style>
+    /* flex 설정 */
+    /* .boxA {display: flex;
+    align-items: flex-start;} */
+    /* flex일 때 박스 크기 위로만 올릴 때 */
+    /* .boxA-1 {width: 30%;}
+    .boxA-2 {width: 70%;} */
+/* 
+    .boxC {display: flex;}
+    .boxC div {flex-grow: 1;} */
+
+    /* .boxD {display: flex;}
+    .boxD div {flex-grow: 1;} */
+
+
+
+
+
+    /* float 설정 */
+    /* boxA 설정 */
+    /* .boxA:after {content: "";
+    display: block;
+    clear: both;}
+    .boxA-1 {float: left;
+    width: 30%;}
+    .boxA-2 {float: left;
+    width: 70%;} */
+    /* BoxC 설정 */
+    /* .boxC:after {content: "";
+    display: block;
+    clear: both;}
+    .boxC div {float: left;
+    width: 25%;} */
+    /* BoxC 설정 */
+    /* .boxD:after {content: "";
+    display: block;
+    clear: both;}
+    .boxD div {float: left;
+    width: 33.3333%;} */
+
+</style>
+</body>
+</html>
