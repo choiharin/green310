@@ -1,0 +1,11 @@
+@charset 'utf-8';
+
+
+header {background-color: #fff;}
+header h1 {position: absolute;
+            width: 180px;
+            height: 136px;
+            background-image: url(../img/logo1.png);
+            text-indent: -9999px;
+            left: 50%;
+            margin-left: 90%;}

@@ -1,0 +1,111 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+* {margin: 0;
+padding: 0;}
+ol,ul {list-style: none;}
+a {text-decoration: none;
+    color: black;}
+body {font-family: '맑은고딕','sans serif'}
+
+.boxA {display: flex;}
+.box3 {width: 70%;}
+.box4 {width: 30%;}
+
+.logo h1 {font-size: 30px;
+font-weight: normal;
+padding-bottom: 5px;
+font-family: 'Paytone One', sans-serif;
+color: #7cbac1;}
+
+.menu ul {display: flex;
+background-color: #7cbac1;
+}
+.menu ul li a {display: block;
+padding: 15px;
+margin-top: 2px;
+font-size: 14px;}
+.menu ul li a:hover {background-color:#75dbe7;}
+
+.title {padding-top: 40px;
+padding-bottom: 30px;
+margin-right: 40px;}
+.title h1 {font-size: 35px;
+margin-bottom: 20px;
+margin-top: 1px;}
+.title h2 {font-size: 25px;
+margin-top: 20px;
+font-weight: normal;
+border-left: 10px solid #7cbac1;}
+.title img {max-width: 100%;}
+.title p {margin-top: 20px;}
+
+
+
+
+.storyinfo {margin-top: -10px;
+margin-bottom: 20px;}
+.storyinfo i {font-size: 18px;
+color: #666;}
+.storyinfo time {}
+
+
+
+
+.special {margin-top: 40px;}
+.special h1 {font-size: 24px;
+font-weight: bold;
+color: #666;
+border-bottom: 1px dotted #aaa;
+margin-bottom: 10px;}
+.special p a {font-size: 14px;
+margin-top: 20px;}
+
+
+
+.recommend {margin-top: 40px;}
+.recommend h1 {font-size: 24px;
+color: #666;
+border-bottom: 1px dotted #aaa;
+margin-bottom: 10px;}
+.recommend p a {font-size: 14px;
+margin-top: 20px;}
+
+.recommend img {width: 100%;}
+
+
+.popular {font-weight: bold;
+    font-size: 18px;
+    color: #666;}
+    .popular h1 {border-bottom: dotted 2px #ddd;
+    margin-bottom: 10px;
+margin-top: 50px;}
+    .popular ul {}
+    .popular ul li {}
+    .popular ul li a {display: block;
+                        padding: 5px;
+                        border-bottom: dotted 1px #ddd;
+                        color: #2288bb;
+                        font-size: 14px;}
+
+.popular a::after {content: "";
+                    display: block;
+                    clear: both;}
+.popular img {border: none;
+                float: left;
+                width: 60px;}
+.popular .txt {float: none;
+                width: auto;
+            padding-left: 15px;
+            margin-left: 60px;}
+.popular span {color: #666;
+                font-size: 12px;
+                display: block;}
+
+
+
+.box1,.boxA,.menu, .copyright {width: 1000px;
+    margin: 0 auto;}
+
+.copyright {font-size: 14px;
+        color: #666;}
