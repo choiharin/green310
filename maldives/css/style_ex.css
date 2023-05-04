@@ -1,33 +1,54 @@
 @charset 'utf-8';
 
 
+
+
+
 /* header 컨텐츠 */
 header {background-color: #fff;}
-header h1 {position: absolute;
+header h1 {
+            position: absolute;
             width: 180px;
             height: 136px;
+            /* 로고 원본사이즈 크기대로 설정 */
             background-image: url(../img/logo1.png);
+            /* 폴더 밖으로 나가서 이미지 찾아올 때 ../하고 이미지찾아오기 */
             text-indent: -9999px;
+            /* h1안에 있는 logo라는 글자 저 멀리로 보낸거 */
             left: 50%;
             margin-left: -90px;
-        top: 70px;
-    background-size: contain;
-background-repeat: no-repeat;}
-            /* 로고 넣는 방법 : 백그라운드 이미지 */
-            /* margin-left는 width의 절반값 */
+            /* header에서 가운데정렬할 때 두개 사용. */
+            top: 70px;
+            background-size: contain;
+            /* contain은 너비나 높이 중 큰 값을 배경이미지가 삽입되는 요소에 맞춘다 */
+            background-repeat: no-repeat;
+        }
+            /* background-repeat는 설정한 이미지가 반복되는 것을 막아준다. */
+
+
+
+            /* 로고 넣는 방법 : 스타일시트에서 백그라운드 이미지 */
+            /* 꼭 margin-left는 width의 절반값 */
 
 
 /* gnb메뉴 설정 */
 .gnb {position: absolute;
+    /* absolute : 부모요소를 기준으로 배치
+       relative : 요소를 자기 자신을 기준으로 배치 */
     top: 300px;
-    left: 40px;}
+    right: 40px;}
+
 .gnb li {}
+
+/* 심볼 + 텍스트설정 */
 .gnb li a {display: block;
             padding: 8px 30px;
             font-size: 17px;
         font-weight: bold;
         text-align: left;}
-.gnb li i {margin-right: 15px;}
+
+/* 심볼 설정 */
+.gnb li a i {margin-right: 15px;}
 
 
 /* sns설정 */
@@ -35,9 +56,16 @@ background-repeat: no-repeat;}
         bottom: 50px;
         width: 90px;
         height: 47px;
-        left: 50%;
-        margin-left: -45px;}
+        right: 50%;
+        margin-right: -45px;}
+
 .snsSet a {float: left;}
+
+
+
+/* header 설정 끝 */
+
+
 
 
 
@@ -55,4 +83,285 @@ nav a:nth-child(3) {position: absolute;
 nav a:nth-child(4) {position: absolute;
                     right: 96px;
                     top: 5px;}
+/* 같은 라인에 있기 때문에 top값은 유지되고 right 값만 자기 위치 찾아가게끔 */
 
+
+
+
+/* article 내부설정 */
+
+article>div {width: 100%;
+            height: 100%;
+            position: relative;}
+
+
+
+/* 배경이미지 삽입구간설정 */
+article .bg {background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center; /* 이 3개는 꼭 쓰고해야함 */
+            overflow: hidden;}
+            /* 클리핑마스크와 같은 효과 */
+
+
+
+
+/* 이미지 삽입 */
+article .bg1 {background-image: url(../img/pic1.jpg);}
+article .bg2 {background-image: url(../img/pic2.jpg);}
+article .bg3 {background-image: url(../img/pic3.jpg);}
+article .bg4 {background-image: url(../img/pic4.jpg);}
+article .bg5 {background-image: url(../img/pic5.jpg);}
+article .bg6 {background-image: url(../img/pic6.jpg);}
+article .bg7 {background-image: url(../img/pic7.jpg);}
+
+
+/* 백그라운드 있는 아티클 글자설정 */
+article .bg span {font-size: 60px;
+                    color: #fff;
+                    position: absolute;
+                    bottom: 0;
+                    right: 20px;
+                    transform: scale(10);
+                    opacity: 0;
+                    transition:all 0.6s ;}
+                    /* transition이란 
+                    '서서히 변화하라' 라는 뜻으로 속성명으로 하나하나 지시하거나,
+                    모든 속성을 불러 지시한다.
+                    또한 움직이는 속도를 초단위로 표시한다. 
+                    시작을 알리는 선택자에 넣는다
+                    hover 값의 동적인 요소를 만들 때 사용한다.*/
+
+article .bg:hover span {transform: scale(1);
+                        opacity: 1;}
+/* 부모자에 호버를 했을 떄 자식이 움직여라 */
+
+
+
+
+
+
+/* txt 영역설정 */
+article .txt {color: #666;
+                background-color: #ffff;
+                padding: 40px 30px;
+                box-sizing: border-box;
+                transition: background-color 1s;}
+                /* box-sizing: border-box 화면에서 벗어나서 아래스크롤 생겼을 때
+                100% 만들어주기 위한. */
+                /* hover에서 바뀌는걸 transition에 써주면 됨. */
+
+article .txt:hover {background-color: #6ce2fb;
+                    color: #fff;}
+
+article .txt strong {display: block;
+                    font-size: 30px;}
+article .txt em {}
+
+/* 자손자 중 3번째 */
+article:nth-child(3) .txt {background-color: #bff7fa;}
+
+/* txt중에서 .txt2의 이름을 갖고있는 선택자 (띄어쓰기 안하고, ~중에 라는 뜻)*/
+article .txt.txt2 {background-color: #e3f1fb;}
+
+article .txt i {position: absolute;
+                right: 0;
+                font-size: 220px;
+                color: #b2effc;
+                right: -550px;
+                transition: 0.7s;
+                z-index: 0;}
+article p {z-index: 10;
+            position: relative;}
+
+article:nth-child(3) i {right: 20px;}
+
+article .txt:hover i {right: 0;}
+
+
+
+
+
+
+
+
+
+
+
+/* 미디어쿼리구간///////////////////////// */
+/* 상세미세설정은 스타일시트 */
+/* 변경되지 않을 것들은 지우면 됨. */
+
+
+
+/* 480px~639px 구간 */
+@media (min-width:480px) and (max-width:639px) {
+
+    /* header 콘텐츠 */
+header h1 {
+    width: 200px;
+    height: 40px;
+    background-image: url(../img/logo2.png);
+    left: 50%;
+    margin-left: -100px;
+top: 20px; }
+
+
+.gnb {top: 80px;
+    right: 0px;
+    width: 100%;}
+.gnb li {float: left;
+        width: 25%;}
+.gnb li a {display: block;
+    padding: 8px 4px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;}
+
+
+
+
+
+.snsSet {display: none;
+bottom: 20px;
+right: 40px;
+margin-right: 0px;}
+}
+
+/* 3. 640px~779px 구간 */
+@media (min-width:640px) and (max-width:779px) {
+
+/* header 콘텐츠 */
+header h1 {
+    width: 200px;
+    height: 40px;
+    background-image: url(../img/logo2.png);
+    left: 20px;
+    margin-left: 0;
+top: 20px; }
+
+
+.gnb {
+top: 20px;
+right: 40px;}
+.gnb li {float: left;}
+.gnb li a {display: block;
+    padding: 8px 10px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: left;}
+
+
+
+
+
+.snsSet {display: none;
+bottom: 20px;
+right: 40px;
+margin-right: 0px;}
+
+    
+}
+
+
+
+
+
+
+
+/* 4.780px~1023px 구간 */
+@media (min-width:780px) and (max-width:1023px) {
+
+    /* header 콘텐츠 */
+    header h1 {
+        width: 200px;
+        height: 40px;
+        background-image: url(../img/logo2.png);
+        left: 20px;
+        margin-left: 0;
+    top: 20px; }
+
+
+.gnb {
+    top: 20px;
+right: 40px;}
+.gnb li {float: left;}
+
+
+
+
+
+.snsSet {display: none;
+    bottom: 20px;
+right: 40px;
+    margin-right: 0px;}
+}
+
+
+
+
+
+
+/* 5. 1024px~1279px 구간 */
+@media (min-width:1024px) and (max-width:1279px) {
+
+
+    /* header 콘텐츠 */
+    header h1 {
+        width: 200px;
+        height: 40px;
+        background-image: url(../img/logo2.png);
+        left: 20px;
+        margin-left: 0;
+    top: 20px; }
+
+
+.gnb {
+    top: 20px;
+right: 40px;}
+.gnb li {float: left;}
+
+
+
+
+
+.snsSet {display: none;
+    bottom: 20px;
+right: 40px;
+    margin-right: 0px;}
+}
+
+
+
+
+
+
+
+/* 6.1280px~1599px 구간 */
+@media (min-width:1280px) and (max-width:1599px) {
+
+/* header 콘텐츠 */
+    header h1 {
+        width: 200px;
+        height: 40px;
+        background-image: url(../img/logo2.png);
+        left: 20px;
+        margin-left: 0;
+    top: 20px; }
+
+
+.gnb {
+    top: 20px;
+right: 200px;}
+.gnb li {float: left;}
+
+
+
+
+
+.snsSet {
+    bottom: 20px;
+right: 40px;
+    margin-right: 0px;}
+
+}
