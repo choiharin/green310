@@ -16,10 +16,6 @@ body {font-family: '맑은 고딕',
                 'apple SD Gothic Neo',
                 sans-serif;}
 
-/* 박스3과 박스4의 가로정렬 */
-.boxA {display: flex;}
-.box3 {width: 70%;}
-.box4 {width: 30%;}
 
 
 /* 로고설정 */
@@ -102,11 +98,12 @@ font-size: 18px;}
                 margin-bottom: 5px;}
 .relation ul {display: flex;
                 flex-wrap: wrap;}
+                /* 사이즈 변경시 꼭 flex-wrap 필요하다 */
 .relation ul li {width: 25%;}
 .relation ul li a {display: block;
                     padding: 5px;
                     font-size: 14px;}
-.relation img {max-width: 100%;}
+.relation img {width: 100%;}
 .relation .txt {}
 
 
@@ -204,12 +201,90 @@ color: #666;}
 .box5 {padding-top: 15px;
         padding-bottom: 15px;}
 
+
+
+
+/* 박스의 왼쪽 오른쪽 공백확보 (전체구간에 넣을 것) */
+.box1, .boxA, .copyright {padding-left: 10px;
+        padding-right: 10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 미디어커리 구간설정/////////////////////////////////////////*/
+
+
+/* 1.모바일구간 600px 이하 구간/////////////////////////////////////// */
+
+@media (max-width:599px) {
+
+
+    /* CSS 설정구간 */
+    /* snsSet 설정 */
+    .snsset span {text-indent: -9999px;
+                    display: inline-block;}
+    /* 관련기사설정 */
+    .relation ul li {width: 50%;}
+
+}
+
+
+
+
+
+/* 2. 태블릿구간이하구간 600px ~ 767px 까지 구간/////////////////////////////////*/
+
+@media (min-width:601px) and (max-width:767px) {
+
+
+    /* CSS 설정구간 */
+    .box4 {display: flex;}
+    .box4-1 {width: 50%;}
+    .box4-2 {width: 50%;}
+}
+
+
+
+
+
+
+
+/* 3. 태블릿 ~ 데스크탑 구간 768px 이상구간//////////////////////*/
+
+@media (min-width: 768px) {
+
+
+/* CSS 설정구간 */
+/* 박스3과 박스4의 가로정렬 */
+.boxA {display: flex;}
+.box3 {width: 70%;}
+.box4 {width: 30%;}
+
+
 /* 박스3과 박스4의 좌우간격 */
 .box3 {padding-right: 50px;
-box-sizing: border-box;}
+    box-sizing: border-box;}
+    
+}
 
 
 
-/* 화면에 크기설정 및 가운데배치 */
-.box1,.boxA,.menu, .copyright {width: 1000px;
-margin: 0 auto;}
+
+
+/* 4. 일정크기 가로값 변동없는 구간 1024px 이상/////////// */
+
+@media (min-width:1040px)
+
+{ 
+    /* 화면에 크기설정 및 가운데배치 */
+    .box1,.boxA,.menu, .copyright {width: 1000px;
+    margin: 0 auto;}
+}

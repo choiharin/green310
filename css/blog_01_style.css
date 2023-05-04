@@ -8,9 +8,6 @@ a {text-decoration: none;
     color: black;}
 body {font-family: '맑은고딕','sans serif'}
 
-.boxA {display: flex;}
-.box3 {width: 70%;}
-.box4 {width: 30%;}
 
 .logo h1 {font-size: 30px;
 font-weight: normal;
@@ -102,6 +99,59 @@ margin-top: 50px;}
                 font-size: 12px;
                 display: block;}
 
+/* 박스2를 바 형태로 디자인하기 */
+.box2 {background-color: #7cbac1;}
+
+/* 박스5 위에 테두리 삽입 */
+.box5 {border-top: 1px solid #ddd;}
+
+/* 박스 위아래 간격 설정 */
+.box1 {padding-top: 8px;
+        padding-bottom: 8px;}
+.box3 {padding-top: 40px;
+        padding-bottom: 30px;}
+.box4 {padding-top: 40px;
+    padding-bottom: 30px;}
+.box5 {padding-top: 15px;
+        padding-bottom: 15px;}
+
+/* sns 공유설정 */
+.snsset {margin-top: 40px;}
+.snsset ul {display: flex;}
+.snsset ul li {width: 33.3333%;}
+.snsset ul li a {display: block;
+                text-align: center;
+                padding: 5px;
+            color: white;}
+
+.snsset li:nth-child(1) a {background-color: #1da1f2;}
+.snsset li:nth-child(2) a {background-color: #1877f2;}
+.snsset li:nth-child(3) a {/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#833ab4+0,f77737+100 */
+    background: #833ab4; /* Old browsers */
+    background: -moz-linear-gradient(left,  #833ab4 0%, #f77737 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #833ab4 0%,#f77737 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #833ab4 0%,#f77737 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#833ab4', endColorstr='#f77737',GradientType=1 ); /* IE6-9 */
+    }
+
+
+/* 관련기사설정 */
+.relation {background-color: #f0f0d4;
+            padding: 20px;
+            margin-top: 40px;}
+.relation h1 {color: #727224;
+                font-size: 20px;
+                font-weight: normal;
+                margin-bottom: 5px;}
+.relation ul {display: flex;
+                flex-wrap: wrap;}
+.relation ul li {width: 25%;}
+.relation ul li a {display: block;
+                    padding: 5px;
+                    font-size: 14px;}
+.relation img {max-width: 100%;}
+.relation .txt {}
+
 
 
 .box1,.boxA,.menu, .copyright {width: 1000px;
@@ -109,3 +159,57 @@ margin-top: 50px;}
 
 .copyright {font-size: 14px;
         color: #666;}
+
+
+
+/* 1. 모바일구간 설정 600px 이하구간 */
+@media (max-width:599px) {
+
+/* CSS 설정구간 */
+
+    /* CSS 설정구간 */
+    /* snsSet 설정 */
+    .snsset span {text-indent: -9999px;
+        display: inline-block;}
+    /* 관련기사설정 */
+.relation ul li {width: 50%;}
+}
+
+/* 2. 태블릿구간 설정 600~767px 까지 */
+@media (min-width:601px) and (max-width:767px) {
+
+
+/* CSS 설정구간 */
+
+.box4 {display: flex;}
+.box4-1 {width: 50%;}
+.box4-2 {width: 50%;}
+
+    
+}
+
+
+/* 3. 태블릿부터 데스크탑 설정 768px 이상구간 */
+@media (min-width:768px) {
+.boxA {display: flex;}
+.box3 {width: 70%;}
+.box4 {width: 30%;}
+
+.box3 {padding-right: 50px;
+    box-sizing: border-box;}
+
+
+/* CSS 설정구간 */
+}
+
+
+
+/* 4. 일정크기 가로값 변동없는 구간 1024px 이상/////////// */
+
+@media (min-width:1040px)
+
+{ 
+    /* 화면에 크기설정 및 가운데배치 */
+    .box1,.boxA,.menu, .copyright {width: 1000px;
+    margin: 0 auto;}
+}
