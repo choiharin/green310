@@ -9,6 +9,32 @@
     <!-- <link rel="stylesheet" href="css/grid-guide.css"> -->
     <!-- 외부스타일시트연결 -->
     <link rel="stylesheet" href="css/site_style.css">
+
+    <!-- 폰트어썸 CDN -->
+    <script src="https://kit.fontawesome.com/85ac904405.js" crossorigin="anonymous"></script>
+
+    <!-- 제이쿼리 CDN -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <!-- 제이쿼리스크립트 언어설정 -->
+    <script>
+
+        $(document).ready(function(){
+
+        // 한줄주석 줄바꿈시 자동으로 해제
+        // menuBtn click 했을 때, menu가 밑으로 나와라
+
+        $('.menuBtn').click(function(){
+
+            $('.menu').slideToggle()
+        })
+
+
+
+
+        })
+    </script>
+
 </head>
 
 
@@ -19,6 +45,10 @@
                     <img src="img/logo-large.png" alt="width:250px,height:33px"></a></h1>
             </div>
             <div class="box2">
+                <!-- 햄버거버튼 추가 -->
+                <button class="menuBtn">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
                 <div class="menu">
                     <ul>
                         <li><a href="#">메인</a></li>
@@ -38,9 +68,38 @@
     </div>
 
     <div class="box6">
-        <div class="box6-1">box6-1</div>
-        <div class="box6-2">box6-2</div>
-        <div class="box6-3">box6-3</div>
+        <div class="box6-1">
+            <div class="sumary">
+            <a href="#">
+                <i class="fa fa-database" aria-hidden="true"></i>
+                <h2>데이터분석 / 해석</h2>
+                <p>목적에 맞는 다양한 각도로 <br>
+                    데이터를 분석 해석합니다.</p>
+            </a>
+            </div>
+        </div>
+
+        <div class="box6-2">
+            <div class="sumary">
+            <a href="#">
+                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                <h2>데이터 시각화</h2>
+                <p>해석결과는 데이터 시각화해서 <br>
+                    활용할수 있게합니다.</p>
+            </a>
+            </div>
+        </div>
+        
+        <div class="box6-3">
+            <div class="sumary">
+            <a href="#">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <h2>24시간 지원</h2>
+                <p>24시간 대응 팀으로 <br>
+                    장애에 신속하게 대응합니다.</p>
+            </a>
+            </div>
+        </div>
     </div>
 
 
@@ -55,10 +114,13 @@
         </div>
 
         <div class="snsSet">
+            <p>최신정보를 여기서도 받아보세요.</p>
             <ul>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagrem</a></li>
+                <li><a href="#"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i> Twitter</a></li>
+                <li><a href="#"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i>Facebook</a></li>
+                <li><a href="#"><i class="fa fa-instagram fa-fw" aria-hidden="true"></i>Instagrem</a></li>
+                <!-- 폰트어썸에서 examples에서 fixed width 에서 fa-fw 가져오기
+                아이콘 가로값 같아짐 -->
             </ul>
         </div>
     </div>
