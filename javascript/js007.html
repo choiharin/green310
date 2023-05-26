@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_이벤트</title>
+
+    <script>
+    window.onload = function(){
+        
+        const btn = document.getElementById('btn')
+        const ti1 = document.getElementById('ti1')
+        list=document.querySelector('ul')
+
+        listli = document.querySelectorAll;('li')
+        console.log('list')
+
+        const list1 = document.getElementById ('list1'),
+                list2 = document.getElementById ('list2'),
+                list3 = document.getElementById ('list3'),
+                list4 = document.getElementById ('list4'),
+                list5 = document.getElementById ('list5'),
+                list6 = document.getElementById ('list6'),
+                list7 = document.getElementById ('list7')
+
+        list1.onmouseenter = function(){
+            list1.style.backgroundColor = 'red'
+        }
+
+        list2.onmouseenter = function(){
+            list1.style.backgroundColor = 'orange'
+            list2.style.backgroundColor = 'orange'
+        }
+
+
+        list3.onmouseenter = function(){
+            list1.style.backgroundColor = 'yellow'
+            list2.style.backgroundColor = 'yellow'
+            list3.style.backgroundColor = 'yellow'
+        }
+
+        list4.onmouseenter = function(){
+            list1.style.backgroundColor = 'green'
+            list2.style.backgroundColor = 'green'
+            list3.style.backgroundColor = 'green'
+            list4.style.backgroundColor = 'green'
+        }
+
+        list5.onmouseenter = function(){
+            list1.style.backgroundColor = 'blue'
+            list2.style.backgroundColor = 'blue'
+            list3.style.backgroundColor = 'blue'
+            list4.style.backgroundColor = 'blue'
+            list5.style.backgroundColor = 'blue'
+        }
+
+        list6.onmouseenter = function(){
+            list1.style.backgroundColor = 'navy'
+            list2.style.backgroundColor = 'navy'
+            list3.style.backgroundColor = 'navy'
+            list4.style.backgroundColor = 'navy'
+            list5.style.backgroundColor = 'navy'
+            list6.style.backgroundColor = 'navy'
+        }
+
+        list7.onmouseenter = function(){
+            list1.style.backgroundColor = 'purple'
+            list2.style.backgroundColor = 'purple'
+            list3.style.backgroundColor = 'purple'
+            list4.style.backgroundColor = 'purple'
+            list5.style.backgroundColor = 'purple'
+            list6.style.backgroundColor = 'purple'
+            list7.style.backgroundColor = 'purple'
+        }
+
+
+
+        btn.onclick = function(){
+
+            alert('클릭하셨습니다.')
+        };
+        ti1.onmouseenter = function (){
+
+            ti1.style.backgroundColor = 'red'
+        }
+        ti1.onmouseout = function(){
+            ti1.style.backgroundColor = 'transparent'
+        }
+
+
+        list.onmouseout = function(){
+
+            list1.style.backgroundColor = 'transparent'
+            list2.style.backgroundColor = 'transparent'
+            list3.style.backgroundColor = 'transparent'
+            list4.style.backgroundColor = 'transparent'
+            list5.style.backgroundColor = 'transparent'
+            list6.style.backgroundColor = 'transparent'
+            list7.style.backgroundColor = 'transparent'
+        }
+
+    }
+    </script>
+
+
+
+</head>
+<body>
+    <h1 id="ti1">자바스크립트_이벤트</h1>
+    <p>이벤트는 키보드를 누르거나 마우스를 클릭하는 것 처럼 어떤 현상이
+        프로그램에 영향을 미치는 것을 말한다.
+    </p>
+
+    <ul>
+        <li id="list1">마우스이벤트</li>
+        <li id="list2">키보드이벤트</li>
+        <li id="list3">HTML 프레임이벤트</li>
+        <li id="list4">HTML 입력양식이벤트</li>
+        <li id="list5">사용자인터페이스이벤트</li>
+        <li id="list6">구조변화이벤트</li>
+        <li id="list7">터치이벤트</li>
+    </ul>
+
+    <P>작성법 <br>
+    
+    일반적인 방식 : window.onload = function(){실행문}</P>
+    <p>
+        설명 window는 선택자의 자리, onload는 이벤트 속성이라는 이름으로 <br>
+        on을 제외한 load가 이벤트 이름 또는 이벤트타입이라 불리고, <br>
+        이벤트 속성에 넣는 함수를 이벤트리스너 또는 이벤트핸들러라고 한다.
+    </p>
+    <button id="btn">클릭</button>
+
+
+    <h2>추가선택자</h2>
+    <p>id값을 매번 HTML 요소에 추가하는데 불편함이 있음 <br>
+        getElementById 값 대신에
+        querySelector 또는 querySelectorALL 이라는 객체로
+        불러낼 수 있다. <br>
+        이 때, querySelectorsms HTML 태그 중 중복요소가 있을 시 맨 처음에 있는
+        요소만 부르고, querySelectoAll은 모든 요소를 부른다.
+    </p>
+</body>
+</html>
