@@ -141,5 +141,139 @@
         이 때, querySelectorsms HTML 태그 중 중복요소가 있을 시 맨 처음에 있는
         요소만 부르고, querySelectoAll은 모든 요소를 부른다.
     </p>
+
+    <div id="toggle">
+        <span></span>
+        <ul id="gnb">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+        </ul>
+    </div>
+
+    <div id="toggle2">
+        <span></span>
+        <ul id="gnb2">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+        </ul>
+    </div>
+
+
+
+    <style>
+        #toggle span {width: 40px;
+            height: 40px;
+        background-color: black;
+        display: block;
+        cursor: pointer;}
+
+        #toggle span:hover {background-color: red;}
+        #gnb {width: 100px;
+        
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: none;}
+        #gnb li{color: #fff;
+                padding: 10px;
+                margin-bottom: 2px;
+                background-color: blue;}
+
+</style>
+
+
+
+
+
+
+
+
+
+<style>
+    #toggle2 {margin-top: 50px;}
+    #toggle2 span {width: 40px;
+        height: 40px;
+    background-color: yellow;
+    display: block;
+    cursor: pointer;}
+
+    #toggle2 span:hover {background-color: red;}
+    #gnb2 {width: 100px;
+    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;}
+    #gnb2 li{color: #fff;
+            padding: 10px;
+            margin-bottom: 2px;
+            background-color: blue;}
+
+</style>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+    // 토글의 span에 클릭을 하면 gnb가 나타나라
+
+    let btn  = document.querySelector('span'),
+        gnb = document.getElementById('gnb'),
+        ii = 0
+
+
+btn.onclick = function()
+{
+
+    ii++;
+    if(ii==2)
+    ii=0
+    console.log(ii);
+
+    if(ii==1){
+        gnb.style.display = 'block'
+    }else{
+        gnb.style.display = 'none'
+    }
+
+
+// if(gnb.style.display = 'block'){
+
+//     gnb.style.display = 'none'
+// }else{
+// gnb.style.display = 'block'}
+    }
+</script>
+
+
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+
+    // tiggle2의 span을 클릭했을 때, gnb2가 나타나라.
+
+    $('#toggle2>span').click(function(){
+
+        $('#gnb2').fadeToggle()
+    })
+</script>
+
+
+
+
+
+
+
+
 </body>
 </html>
