@@ -47,10 +47,12 @@
                 // 선택자의 탐색구문 공부하기
                 $('.box li').eq(0).css({'color':'red'});
 
-                $('.box').children().css({'border':'1px solid #000'}) 
+                $('.box').children().css({'border':'1px solid #000', 'background':'white'})
                 // 체이닝기법
                 $('.box').parent().css('background','gray')
                 // 단일기법
+                $('.box').prev().css('color','pink')
+                $('.box li').prev().css('color','green')
             })
         </script>
 </body>
