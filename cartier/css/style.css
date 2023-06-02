@@ -68,10 +68,11 @@ article {float: right;
         background-repeat: no-repeat;
         background-position: left center;
         transition: 0.8s;
-        position: relative;}
+        position: relative;
+        overflow: hidden;}
 
-article:hover {width: 35%;
-                }
+/* article:hover {width: 35%;} - 제이쿼리로 구현함. 중복적용 시 에러발생*/
+
 article h2 {position: absolute;
             top: 300px;
             left: 20px;
@@ -80,4 +81,53 @@ article h2 {position: absolute;
             font-weight: bold;
             color: #666;
             border-left: 3px solid #555;
-            padding-left: 15px;}
+            padding-left: 15px;
+            z-index: 10;}
+
+article video {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    height: 100%;
+    width: auto;
+    z-index: 1;
+    transition: all 0.8s; /*display:none의 경우는 부드러운 전환이 안됨.*/
+    opacity: 0;
+    
+}
+
+/* article 내부에 타이틀박스 설정 */
+article div {
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    background-color: #000;
+    opacity: 70%;
+    top: 300px;
+    transition: all 1.2s;
+    z-index: 2;
+}
+article:hover h2 {color: #fff;}
+article:hover div {top: 270px;
+    height: 70px;}
+
+/* article 내부에 설명 설정 */
+
+article h3 {color: #fff;
+            font-size: 30px;
+            position: absolute;
+            width: 100%;
+            height: 0px;
+            bottom: 300px;
+            right: 0;
+            transition: all 1.2s;
+            z-index: 2;}
+
+article p {color: #fff;
+            font-size: 12px;
+            position: absolute;
+            width: 50%;
+            height: 0px;
+            bottom: 250px;
+            z-index: 2;
+            transition: all 1.2s;}
