@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자동슬라이드_예제3</title>
+
+    <!-- 제이쿼리CDN -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            // btn li를 클릴했을 때, slide의 li가 같은 순번을 찾아 움직여라. 
+
+            $('.btn li').click(function(){
+
+                let i = $(this).index()
+                
+                $('.slide li').eq(i-1).css({'left':'0'}).stop().animate({'left':'-100%'},800)
+                $('.slide li').eq(i).css({'left':'100%'}).stop().animate({'left':'0'},800)
+                $('.btn li').removeClass('on')
+                $(this).addClass('on')
+            });
+
+
+
+
+
+
+            // 3초에 한번씩 자동으로 컴퓨터가 btn의 li (0,1,2)를 클릭해라.
+
+            let a = 0;
+
+            setInterval(function(){
+
+                a++;
+                if(a==3)a=0;
+                
+
+                $('.btn li').eq(a).trigger('click')
+                // trigger 핸들러를 통해 마우스를 제어하는 구조
+
+            },3000)
+
+
+            $('.btn002 li').click(function(){
+
+            let l = $(this).index()
+            console.log(l)
+            $('.slide002 li').eq(l-1).css({'top':'0'}).stop().animate({'top':'-100%'},800)
+            $('.slide002 li').eq(l).css({'top':'100%'}).stop().animate({'top':'0'},800)
+            $('.btn002 li').removeClass('on002')
+            
+            $(this).addClass('on002')
+            });
+
+
+
+            let b = 0;
+
+            setInterval(function(){
+
+                b++;
+                if(b==3)b=0;
+
+                $('.btn002 li').eq(b).trigger('click')
+
+            },3000)
+
+
+        })
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="slide">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+
+        <div class="btn">
+            <ul>
+                <li class="on">1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="wrap002">
+        <div class="slide002">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+
+        <div class="btn002">
+            <ul>
+                <li class="on002">1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+    </div>
+
+    <style>
+        * {margin: 0;
+            padding: 0;}
+
+            ul {list-style: none;}
+
+
+            #wrap {position: relative;}
+            .slide {width: 100%;
+                    height: 500px;
+                    overflow: hidden;
+                    position: relative;}
+            .slide ul {width: auto;
+                        height: 500px;
+                        }
+            .slide li {position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 100%;
+                        top: 0;
+                        text-indent: -9999px;
+                        background-position: center center;
+                        background:no-repeat;
+                        background-size: cover;
+                    
+                        }
+            .slide li:nth-child(1) {left: 0;
+                                    background-image: url(slide/img/0.png);}
+
+            .slide li:nth-child(2) {
+                                    background-image: url(slide/img/1.png);}
+
+            .slide li:nth-child(3) {
+                                    background-image: url(slide/img/2.png);}
+
+
+
+                                    
+
+            .btn {position: absolute;
+                    width: 54px;
+                    left: 50%;
+                    margin-left: -27px;
+                    bottom: 70px;}
+            .btn ul {display: flex;}
+            .btn li {width: 14px;
+                    height: 14px;
+                    border-radius: 7px;
+                    background-color: #fff;
+                    opacity: 0.6;
+                    margin: 0 2px;
+                    text-indent: -9999px;}
+
+                    .btn li.on {background-color: #000;
+                                opacity: 1;}
+
+
+            .wrap002 {position: relative;
+                        margin-top: 50px;}
+            .slide002 {width: 100%;
+                    height: 1000px;
+                    overflow: hidden;
+                    position: relative;}
+            .slide002 ul {width: auto;
+                        height: 500px;}
+            .slide002 li {position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 100%;
+                        text-indent: -9999px;
+                        background-position: center center;
+                        background:no-repeat;
+                        background-size: cover;}
+            .slide002 li:nth-child(1) {top: 0;
+                                    background-image: url(slide/img/001.jpg);}
+
+            .slide002 li:nth-child(2) {
+                                    background-image: url(slide/img/002.jpg);}
+
+            .slide002 li:nth-child(3) {
+                                    background-image: url(slide/img/003.jpg);}
+
+
+
+                                    
+
+            .btn002 {position: absolute;
+                    height: 54px;
+                    top: 45%;   
+                    margin-left: 25px;
+                    
+                    }
+            .btn002 ul {display: block;}
+            .btn002 li {width: 14px;
+                    height: 14px;
+                    border-radius: 7px;
+                    background-color: #fff;
+                    opacity: 0.6;
+                    margin: 30px 0;
+                    text-indent: -9999px;}
+
+                    .btn002 li.on002 {background-color: blue;
+                                opacity: 1;}
+
+
+
+                    
+    </style>
+</body>
+</html>

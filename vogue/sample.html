@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트렌스폼_3D</title>
+</head>
+<body>
+    <h1>transform_3D</h1>
+    <p>2D에서 3D로 변환 시 가장 중요한 속성은 원근감이다.<br>
+        원근감 : perspective
+    </p>
+    <p>사용법 <br>
+    부모자의 원근값 수치 작성 (단위포함) perspective:수치px</p>
+    <p>주의사항 : 수치가 작을수록 왜곡이 커지며 수치가 커질수록 왜곡이 적어진다.</p>
+
+    <h2>예제</h2>
+    <section>
+        <div>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+        </div>
+    </section>
+
+    <section class="box001">
+        <article>
+            <p></p>
+            <p></p>
+        </article>
+    </section>
+
+    <section class="box002">
+        <article>
+            <p></p>
+            <p></p>
+        </article>
+    </section>
+
+    
+
+    <style>
+        section {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 50px;
+        }
+
+        section div {width: 200px;
+                    height: 200px;
+                    border: 1px solid #000;}
+        section div:nth-child(1) {perspective: 150px;}
+        section div:nth-child(3) {perspective: 800px;}
+
+        section div p {margin: 0;
+                        padding: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: aquamarine;
+                        opacity: 0.5;
+                        transform: rotateX(50deg);}
+
+        .box001 article {width: 800px;
+                        height: 600px;
+                        border: 1px solid #000;
+                        perspective: 200px;
+                        display: flex;}
+        section article p {width: 400px;
+            height: 100%;
+            background-color: blueviolet;
+            opacity: 0.8;
+            margin: 0;
+            transition: all 0.8s;
+            }
+
+        .box001 article p:nth-child(1) {transform-origin: left top;}
+        .box001 article p:nth-child(2) {transform-origin: right top;}
+
+
+            .box001 article:hover p:nth-child(1) {
+                transform: rotateY(60deg);}
+            .box001 article:hover p:nth-child(2) {
+                transform: rotateY(-60deg);}
+
+        .box002 article {width: 800px;
+                        height: 600px;
+                        border: 1px solid #000;
+                        perspective: 200px;
+}
+        .box002 article p {width: 100%;
+            height: 300px;
+            background-color: blueviolet;
+            opacity: 0.8;
+            margin: 0;
+            transition: all 0.8s;
+            display: block;}
+
+            .box002 article p:nth-child(1) {transform-origin: top;}
+            .box002 article p:nth-child(2) {transform-origin: bottom;}
+
+            .box002 article:hover p:nth-child(1) {
+                transform: rotateX(40deg);}
+                .box002 article:hover p:nth-child(2) {
+                transform: rotateX(-40deg);}
+            
+    </style>
+
+
+</body>
+</html>
