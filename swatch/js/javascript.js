@@ -83,7 +83,7 @@ $('section').mousewheel(function(event,delta){
 
 
         let prev = $(this).prev().offset().top 
-        //한페이지씩 딱딱 떨어지게 올릴 떄 (이래서 위로)
+        //한페이지씩 딱딱 떨어지게 올릴 떄 (아래서 위로)
         $('html,body').stop().animate({scrollTop:prev},1400,'easeOutBounce')
     }
         else if(delta<0){
